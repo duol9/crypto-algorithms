@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Apache Commons Math3 의존성 추가
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+}
+
+test {
+    useJUnitPlatform()
+}
